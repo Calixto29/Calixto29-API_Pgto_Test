@@ -1,6 +1,8 @@
 package br.com.FADESP.pagamentoFadesp.http.controller;
 
 import br.com.FADESP.pagamentoFadesp.entity.Pagamento;
+import br.com.FADESP.pagamentoFadesp.entity.StatusPagamento;
+import br.com.FADESP.pagamentoFadesp.repository.PagamentoRepository;
 import br.com.FADESP.pagamentoFadesp.service.PagamentoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+
+import static br.com.FADESP.pagamentoFadesp.repository.PagamentoRepository.*;
 
 @RestController
 @RequestMapping("/pagamento")
