@@ -26,16 +26,16 @@ public class Pagamento implements Serializable {
     private String cpfCnpjPagador;
 
     @Column(name = "metodo_pagamento", nullable = false)
-    private MetodoPagamento metodopagamento;
+    private MetodoPagamento metodoPagamento;
 
-    @Column(name = "numero_cartao", nullable = false)
+    @Column(name = "numero_cartao", nullable = true)
     private String numeroCartao;
 
     @Column(name = "valor", nullable = false)
     private Double valor;
 
-    @Column(name = "status", nullable = false)
-    private StatusPagamento status;
+    @Column(name = "status", nullable = true)
+    private StatusPagamento status = StatusPagamento.PENDENTE_PROCESSAMENTO;
 
 }
 
